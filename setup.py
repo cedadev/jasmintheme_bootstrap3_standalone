@@ -1,3 +1,11 @@
+""" A setuptools based setup module. """
+
+__author__ = "Matt Pritchard"
+__date__ = "2019-11-19"
+__copyright__ = "Copyright 2019 United Kingdom Research and Innovation"
+__license__ = "BSD - see LICENSE file in top-level directory"
+
+
 import os, re
 from setuptools import setup
 
@@ -18,7 +26,7 @@ setup(
     version = VERSION,
     packages = [base_name,],
     include_package_data = True,
-    license = 'BSD License', # example license
+    license = 'BSD License',
     description = 'JASMIN django app templates',
     long_description = README,
     url = 'http://team.ceda.ac.uk/svn/ceda/ceda_software/jasminsite/themes/jasmintheme_bootstrap3_standalone',
