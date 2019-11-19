@@ -1,0 +1,39 @@
+/* Customisations to bootstrap theme for JASMIN theme (order: bootstrap - mezzanine - bootstrap-theme - this */
+
+body {
+	margin-top: 50px; /* 50px is the height of the navbar - change this if the navbar height changes */
+}
+
+/* change the URL to a picture of your choice - the higher quality the better! */
+.business-header {
+	height: 200px;
+	background: url(/static/img/banner.jpg) top left no-repeat;
+    padding: 5px;
+}
+
+.business-header-page {
+	height: 80px;
+	background: url(/static/img/banner.jpg) top left no-repeat;
+    padding: 5px;
+}
+
+/* adjust the color and text shadow to optimize legibility once you have an image set - you can also change the vertical positioning if desired  */
+.tagline {
+	color: #fff;
+	text-shadow: 0 0 10px #000;
+}
+
+footer {
+	margin: 50px 0;
+}
+
+.img-pad-1px-right {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  text-align: right;
+  padding-top: 1px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}

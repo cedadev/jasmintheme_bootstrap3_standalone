@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}>
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="{{keywords}}">
+<meta name="description" content="{{meta_description}}">
+<title>Configure Appliance</title>
+<link rel="shortcut icon" href="static/img/favicon.ico">
+
+
+
+<link rel="stylesheet" href="static/css/bootstrap.css">
+<link rel="stylesheet" href="static/css/mezzanine.css">
+<link rel="stylesheet" href="static/css/bootstrap-theme.css">
+<link rel="stylesheet" href="static/css/jasmin.css">
+
+<script src="static/js/jquery-1.7.1.min.js"></script>
+<script src="static/js/bootstrap.js"></script>
+<script src="static/js/bootstrap-extras.js"></script>
+
+<!--[if lt IE 9]>
+<script src="static/js/html5shiv.js" %}"></script>
+<script src="static/js/respond.min.js" %}"></script>
+<![endif]-->
+
+</head>
+
+<body id="{{body_id}}">
+<!-- container for entire page -->
+<div class="container-fluid">
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container">
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">JASMIN Cloud Portal</a>
+</div>
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+
+<div class="container">
+
+<div class="messages">
+<div class="alert alert-dismissable alert-info" data-alert="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    {{ dismissable message }}
+</div>
+
+</div>
+
+<!-- block page_wrapper -->
+
+<!-- block title_wrapper -->
+<div class="business-header-page tagline">
+<h1>Configure Appliance</h1>
+</div>
+<!-- endblock -->
+
+<!-- block breadcrumb_wrapper -->
+<div class="container-fluid">
+    <ul class="breadcrumb">
+        <li id="breadcrumb-menu-item1"><a href="#item1">Home</a></li><li id="breadcrumb-menu-Item1-Item2"
+            class="active">Configure Appliance</li>
+    </ul>
+</div>
+<!-- endblock -->
+
+</div>
+
+<div class="container">
+<div class="row">
+
+<!-- block content_wrapper -->
+
+        <!-- block left_wrapper -->
+        <div class="col-md-2 left">
+            <!-- block left_panel -->
+            <div class="panel panel-default tree">
+            
+            <ul class="nav nav-list navlist-menu-level-0">
+                <li id="item1"><a href="#item1">item1</a>
+                <ul class="nav nav-list navlist-menu-level-1">
+                    <li id="tree-menu-item2"><a href="#item2">item2</a></li>
+                    <li class="active" id="item3"><a href="#item3">item3</a></li>
+                </ul>
+            </ul>
+            </div>
+            <!-- endblock -->
+        </div>
+        <!-- endblock -->
+
+        <!-- block mid_wrapper -->
+        <!-- endblock -->
+
+        <!-- block right_wrapper -->
+        <div class="col-md-10 right">
+			<form class="form-horizontal" role="form">
+				<fieldset>
+					<legend>General information</legend>
+					<div class="form-group">
+						<label for="inputText1" class="col-sm-2 control-label">Name</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="inputText1" placeholder="placeholder text">
+						</div>				
+					</div>
+					<div class="form-group">
+						<label for="inputTextArea1" class="col-sm-2 control-label">Description</label>
+						<div class="col-sm-6">
+							<textarea class="form-control" rows="3" placeholder="placeholder text" id="inputTextArea1"></textarea>
+						</div>		
+					</div>
+					<div class="form-group">
+						<label for="inputDate1" class="col-sm-2 control-label">End of Life</label>
+						<div class="col-sm-6">
+							<input type="date" class="form-control" id="inputDate1">
+						</div>		
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Network</legend>
+					<div class="form-group">
+						<div class="col-sm-2"></div>
+						<div class="col-sm-6">
+							<label class="checkbox-inline">
+								<input type="checkbox"> Route outside JVO
+							</label>
+						</div>
+								
+					</div>
+					<div class="form-group">
+						<label for="select1" class="col-sm-2 control-label">External IP</label>
+						<div class="col-sm-6">
+							<select id="select1" class="form-control">
+								<option>Option1</option>
+								<option>Option2</option>
+							</select>
+						</div>
+					</div>
+				</fieldset>
+				
+				<fieldset>
+					<legend>Mount Data Volumes</legend>
+					
+					
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" id="storageCheckbox1"> /group_workspaces/jasmin/myproject1
+						</label>
+					</div>
+					
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" id="storageCheckbox2"> /home/users/
+						</label>
+					</div>
+					
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" id="storageCheckbox3"> /some/other/storage
+						</label>
+					</div>
+								
+				</fieldset>									
+							
+			</form>
+        </div>
+        <!-- endblock -->
+
+<!-- endblock -->
+
+</div>
+
+</div>
+</div>
+
+<!-- endblock -->
+
+<!-- endblock -->
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 float-left">
+                <a href="http://www.nerc.ac.uk" title="NERC"><img src="static/img/nerc-long-logo-261.png" title="NERC logo" height="53" width="261" alt="NERC logo" class="img-responsive pull-left" /></a>
+            </div>
+            <div class="col-md-6 float-right">
+                <a href="http://www.stfc.ac.uk" title="STFC"><img src="static/img/STFCMediumColourTrans.png" title="STFC logo" height="57" width="261" alt="STFC logo" class="img-responsive pull-right" /></a>
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col-md-12 middle">
+                <p class="site-info text-center">
+                    {{credits}}
+                    |
+                    Themed with <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>
+                </p>
+                <p class="site-info text-center">Copyright &copy; 2014 <a href="http://www.stfc.ac.uk">STFC</a>  |  All Rights Reserved</p>
+            </div>
+        </div>      
+    </div>
+</footer>
+
+<!-- Footer scripts -->
+<!-- -->
+
+</div>
+</body>
+</html>
